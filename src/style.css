@@ -1,32 +1,54 @@
 body {
 	background-color: rgb(235, 230, 243);
+	min-height: 100vh;
+	margin: 0;
 }
 h1 {
+	margin: 0 auto;
 	color: #3586a7;
 }
+header {
+}
 
+main {
+	width: 900px;
+	height: 900px;
+}
+/* HÖHE UND BREITE NICHT ANPASSBAR */
 #game {
-	width: 60%;
-	height: 200%;
-	background-color: blue;
+	/* width: min(75vw, 75vh);
+	height: min(75vw, 75vh); */
+	/* 
+	min-width: 150px;
+	max-width: 900px;
+	min-height: 150px;
+	max-height: 900px; */
+
+	width: 600px;
+	height: 600px;
+	margin: 0 auto;
 
 	border: 5px solid chocolate;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-content: space-evenly;
 	flex-wrap: wrap;
+	/* text-align: center; */
 }
 #game div {
-	width: 30%;
-	height: 30%;
+	width: 33%;
+	/* max-width: 300px; */
+	height: 33%;
+	/* max-height: 300px; */
 	background-color: black;
 
 	border: 1px solid white;
 	color: blueviolet;
-	display: flex;
-	font-size: 3rem;
-	flex-grow: 1;
+
+	font-size: 9rem;
+	position: relative;
+	text-align: center;
 }
 div:hover {
 	cursor: pointer;
