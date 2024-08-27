@@ -26,8 +26,7 @@ for (let i = 0; i < divs.length; i++) {
 function move(DivId: string) {
 	if (game === "gameOver") {
 		return;
-	}
-	if (counter % 2 === 0) {
+	} else if (counter % 2 === 0) {
 		player = "X";
 		(<HTMLDivElement>document.getElementById(DivId)).innerHTML = player;
 		counter++;
@@ -76,6 +75,8 @@ function winCheck() {
 	} else if (arr[3] === player && arr[5] === player && arr[7] === player) {
 		whoWins();
 		newGame();
+	} else if (counter === 9) {
+		newGame();
 	}
 }
 
@@ -96,8 +97,8 @@ function whoWins() {
 
 //MARK: timeOut
 function playerOneWin() {
-	alert("Glückwunsch Spieler 1.");
 	(<HTMLSpanElement>document.getElementById("ende1")).classList.add("show");
+	alert("Glückwunsch Spieler 1.");
 }
 function playerTwoWin() {
 	alert("Glückwunsch Spieler 2");
