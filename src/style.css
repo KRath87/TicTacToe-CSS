@@ -3,25 +3,31 @@
 }
 
 body {
-	background-color: rgb(235, 230, 243);
+	background-image: linear-gradient(
+		rgba(0, 0, 255, 0.5),
+		rgba(255, 0, 191, 0.5)
+	);
+
 	min-height: 100vh;
-	margin: 0;
+	background-size: contain;
+	margin: auto;
 }
 header {
 	text-align: center;
 }
 h1 {
 	margin: 0 auto;
-	color: #3586a7;
+	color: #0a0a0a;
 }
 #game {
 	width: 600px;
 	height: 600px;
 	margin: 0 auto;
-	border: 5px solid chocolate;
+	border: 5px solid rgb(129, 5, 113);
 	display: flex;
 	flex-wrap: wrap;
 	position: relative;
+	opacity: 0.5;
 }
 #game div {
 	width: calc(100% / 3);
@@ -41,7 +47,8 @@ div:hover {
 button {
 	width: 150px;
 	height: 100px;
-	background-color: rgb(72, 27, 114);
+	background-color: rgb(56, 8, 100, 1);
+	opacity: 1;
 	color: rgb(255, 255, 255);
 	position: absolute;
 	top: 50%;
