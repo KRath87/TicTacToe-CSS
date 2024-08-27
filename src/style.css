@@ -52,8 +52,22 @@ button {
 
 .show {
 	visibility: visible;
-	pointer-events: all;
+	/* pointer-events: all; */
 }
-.disablePointer {
+/* .disablePointer {
 	pointer-events: none;
+} */
+#ende1 {
+	background-color: aqua;
+	width: 100%;
+	height: calc(100% / 3);
+	position: absolute;
+	visibility: hidden;
+}
+#ende2 {
+	background-color: aqua;
+	width: 100%;
+	height: calc(100% / 3);
+	position: absolute;
+	visibility: hidden;
 }
