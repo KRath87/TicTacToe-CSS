@@ -72,11 +72,6 @@ function move(DivId: string) {
 		let indexArray = parseInt(DivId);
 		arr[indexArray] = player;
 
-		// (<HTMLDivElement>document.getElementById(DivId)).removeEventListener(
-		// 	"click",
-		// 	() => move(DivId)
-		// );
-		// removeEventListener();
 		winCheck();
 	} else {
 		player = "O";
@@ -85,11 +80,6 @@ function move(DivId: string) {
 		let indexArray = parseInt(DivId);
 		arr[indexArray] = player;
 
-		// (<HTMLDivElement>document.getElementById(DivId)).removeEventListener(
-		// 	"click",
-		// 	() => move(DivId)
-		// );
-		// removeEventListener();
 		winCheck();
 	}
 }
@@ -97,6 +87,10 @@ function move(DivId: string) {
 function winCheck() {
 	// horizontal
 	if (arr[1] === player && arr[2] === player && arr[3] === player) {
+		(<HTMLDivElement>document.getElementById("game")).classList.add(
+			"disablePointer"
+		);
+
 		if (player === "X") {
 			setTimeout(playerOneWin, 50);
 		} else {
@@ -105,6 +99,9 @@ function winCheck() {
 		}
 		newGame();
 	} else if (arr[4] === player && arr[5] === player && arr[6] === player) {
+		(<HTMLDivElement>document.getElementById("game")).classList.add(
+			"disablePointer"
+		);
 		if (player === "X") {
 			setTimeout(playerOneWin, 50);
 		} else {
@@ -112,6 +109,9 @@ function winCheck() {
 		}
 		newGame();
 	} else if (arr[7] === player && arr[8] === player && arr[9] === player) {
+		(<HTMLDivElement>document.getElementById("game")).classList.add(
+			"disablePointer"
+		);
 		if (player === "X") {
 			setTimeout(playerOneWin, 50);
 		} else {
@@ -120,6 +120,9 @@ function winCheck() {
 		newGame();
 		// vertikal
 	} else if (arr[1] === player && arr[4] === player && arr[7] === player) {
+		(<HTMLDivElement>document.getElementById("game")).classList.add(
+			"disablePointer"
+		);
 		if (player === "X") {
 			setTimeout(playerOneWin, 50);
 		} else {
@@ -127,6 +130,9 @@ function winCheck() {
 		}
 		newGame();
 	} else if (arr[2] === player && arr[5] === player && arr[8] === player) {
+		(<HTMLDivElement>document.getElementById("game")).classList.add(
+			"disablePointer"
+		);
 		if (player === "X") {
 			setTimeout(playerOneWin, 50);
 		} else {
@@ -134,6 +140,9 @@ function winCheck() {
 		}
 		newGame();
 	} else if (arr[3] === player && arr[6] === player && arr[9] === player) {
+		(<HTMLDivElement>document.getElementById("game")).classList.add(
+			"disablePointer"
+		);
 		if (player === "X") {
 			setTimeout(playerOneWin, 50);
 		} else {
@@ -142,6 +151,9 @@ function winCheck() {
 		newGame();
 		// diagonal
 	} else if (arr[1] === player && arr[5] === player && arr[9] === player) {
+		(<HTMLDivElement>document.getElementById("game")).classList.add(
+			"disablePointer"
+		);
 		if (player === "X") {
 			setTimeout(playerOneWin, 50);
 		} else {
@@ -149,6 +161,9 @@ function winCheck() {
 		}
 		newGame();
 	} else if (arr[3] === player && arr[5] === player && arr[7] === player) {
+		(<HTMLDivElement>document.getElementById("game")).classList.add(
+			"disablePointer"
+		);
 		if (player === "X") {
 			setTimeout(playerOneWin, 50);
 		} else {
@@ -168,43 +183,3 @@ function playerTwoWin() {
 function newGame() {
 	(<HTMLButtonElement>document.getElementById("newGame")).classList.add("show");
 }
-
-//MARK: "removeEventListener";
-// function removeEventListener() {
-// 	(<HTMLDivElement>document.getElementById("1")).removeEventListener(
-// 		"click",
-// 		() => move("1")
-// 	);
-// 	(<HTMLDivElement>document.getElementById("2")).removeEventListener(
-// 		"click",
-// 		() => move("2")
-// 	);
-// 	(<HTMLDivElement>document.getElementById("3")).removeEventListener(
-// 		"click",
-// 		() => move("3")
-// 	);
-// 	(<HTMLDivElement>document.getElementById("4")).removeEventListener(
-// 		"click",
-// 		() => move("4")
-// 	);
-// 	(<HTMLDivElement>document.getElementById("5")).removeEventListener(
-// 		"click",
-// 		() => move("5")
-// 	);
-// 	(<HTMLDivElement>document.getElementById("6")).removeEventListener(
-// 		"click",
-// 		() => move("6")
-// 	);
-// 	(<HTMLDivElement>document.getElementById("7")).removeEventListener(
-// 		"click",
-// 		() => move("7")
-// 	);
-// 	(<HTMLDivElement>document.getElementById("8")).removeEventListener(
-// 		"click",
-// 		() => move("8")
-// 	);
-// 	(<HTMLDivElement>document.getElementById("9")).removeEventListener(
-// 		"click",
-// 		() => move("9")
-// 	);
-// }

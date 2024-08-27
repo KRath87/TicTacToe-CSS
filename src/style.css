@@ -53,3 +53,6 @@ button {
 .show {
 	visibility: visible;
 }
+.disablePointer {
+	pointer-events: none;
+}
