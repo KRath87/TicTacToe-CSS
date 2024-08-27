@@ -1,67 +1,25 @@
 import "./style.css";
 
-// document.getElementById("hallo")?.addEventListener("click", greeting);
-
-// function greeting() {
-// 	console.log("hallo");
-
-// }
-
 let player = "";
 let counter = 0;
 const arr: string[] = [];
 
-//MARK: EventListener
-(<HTMLButtonElement>document.getElementById("newGame")).addEventListener(
-	"click",
-	() => window.location.reload()
-);
+const divs = document.querySelectorAll("section div");
 
-(<HTMLDivElement>document.getElementById("1")).addEventListener(
-	"click",
-	() => move("1"),
-	{ once: true }
-);
-(<HTMLDivElement>document.getElementById("2")).addEventListener(
-	"click",
-	() => move("2"),
-	{ once: true }
-);
-(<HTMLDivElement>document.getElementById("3")).addEventListener(
-	"click",
-	() => move("3"),
-	{ once: true }
-);
-(<HTMLDivElement>document.getElementById("4")).addEventListener(
-	"click",
-	() => move("4"),
-	{ once: true }
-);
-(<HTMLDivElement>document.getElementById("5")).addEventListener(
-	"click",
-	() => move("5"),
-	{ once: true }
-);
-(<HTMLDivElement>document.getElementById("6")).addEventListener(
-	"click",
-	() => move("6"),
-	{ once: true }
-);
-(<HTMLDivElement>document.getElementById("7")).addEventListener(
-	"click",
-	() => move("7"),
-	{ once: true }
-);
-(<HTMLDivElement>document.getElementById("8")).addEventListener(
-	"click",
-	() => move("8"),
-	{ once: true }
-);
-(<HTMLDivElement>document.getElementById("9")).addEventListener(
-	"click",
-	() => move("9"),
-	{ once: true }
-);
+//MARK: EventListener
+for (let i = 0; i < divs.length; i++) {
+	let item = divs[i].id;
+	(<HTMLDivElement>document.getElementById(item)).addEventListener(
+		"click",
+		() => move(item),
+		{ once: true }
+	);
+
+	(<HTMLButtonElement>document.getElementById("newGame")).addEventListener(
+		"click",
+		() => window.location.reload()
+	);
+}
 
 //MARK:move
 function move(DivId: string) {
