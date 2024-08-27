@@ -32,7 +32,7 @@ h1 {
 	color: blueviolet;
 
 	font-size: 9rem;
-	position: relative;
+
 	text-align: center;
 }
 div:hover {
@@ -52,6 +52,7 @@ button {
 
 .show {
 	visibility: visible;
+	pointer-events: all;
 }
 .disablePointer {
 	pointer-events: none;
