@@ -49,34 +49,26 @@ function winCheck() {
 	// horizontal
 	if (arr[1] === player && arr[2] === player && arr[3] === player) {
 		whoWins();
-		newGame();
 	} else if (arr[4] === player && arr[5] === player && arr[6] === player) {
 		whoWins();
-		newGame();
 	} else if (arr[7] === player && arr[8] === player && arr[9] === player) {
 		whoWins();
-		newGame();
 
 		// vertikal
 	} else if (arr[1] === player && arr[4] === player && arr[7] === player) {
 		whoWins();
-		newGame();
 	} else if (arr[2] === player && arr[5] === player && arr[8] === player) {
 		whoWins();
-		newGame();
 	} else if (arr[3] === player && arr[6] === player && arr[9] === player) {
 		whoWins();
-		newGame();
 
 		// diagonal
 	} else if (arr[1] === player && arr[5] === player && arr[9] === player) {
 		whoWins();
-		newGame();
 	} else if (arr[3] === player && arr[5] === player && arr[7] === player) {
 		whoWins();
-		newGame();
 	} else if (counter === 9) {
-		newGame();
+		setTimeout(newGame, 25);
 	}
 }
 
@@ -88,9 +80,11 @@ function newGame() {
 //MARK: whoWins
 function whoWins() {
 	if (player === "X") {
-		setTimeout(playerOneWin, 50);
+		setTimeout(playerOneWin, 25);
+		setTimeout(newGame, 25);
 	} else {
-		setTimeout(playerTwoWin, 50);
+		setTimeout(playerTwoWin, 25);
+		setTimeout(newGame, 25);
 	}
 	game = "gameOver";
 }
@@ -98,8 +92,9 @@ function whoWins() {
 //MARK: timeOut
 function playerOneWin() {
 	(<HTMLSpanElement>document.getElementById("ende1")).classList.add("show");
-	alert("Glückwunsch Spieler 1.");
+	(<HTMLSpanElement>document.getElementById("ende3")).classList.add("show");
 }
 function playerTwoWin() {
-	alert("Glückwunsch Spieler 2");
+	(<HTMLSpanElement>document.getElementById("ende2")).classList.add("show");
+	(<HTMLSpanElement>document.getElementById("ende4")).classList.add("show");
 }

@@ -3,10 +3,8 @@
 }
 
 body {
-	background-image: linear-gradient(
-		rgba(0, 0, 255, 0.5),
-		rgba(255, 0, 191, 0.5)
-	);
+	background-image: url(https://plus.unsplash.com/premium_vector-1724065087978-2ab9a03105e7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxpbGx1c3RyYXRpb25zLWZlZWR8MTl8fHxlbnwwfHx8fHw%3D);
+	/* linear-gradient(rgba(0, 0, 255, 0.6), rgba(255, 0, 191, 0.5)); */
 
 	min-height: 100vh;
 	background-size: contain;
@@ -23,11 +21,10 @@ h1 {
 	width: 600px;
 	height: 600px;
 	margin: 0 auto;
-	border: 5px solid rgb(129, 5, 113);
+	border: 5px solid rgba(10, 6, 6, 0.5);
 	display: flex;
 	flex-wrap: wrap;
 	position: relative;
-	opacity: 0.5;
 }
 #game div {
 	width: calc(100% / 3);
@@ -35,8 +32,8 @@ h1 {
 	background-color: black;
 
 	border: 1px solid white;
-	color: blueviolet;
-
+	color: rgb(243, 240, 245);
+	opacity: 0.4;
 	font-size: 9rem;
 
 	text-align: center;
@@ -47,34 +44,53 @@ div:hover {
 button {
 	width: 150px;
 	height: 100px;
-	background-color: rgb(56, 8, 100, 1);
-	opacity: 1;
+	background-color: rgb(241, 76, 10);
+	opacity: 0.9;
 	color: rgb(255, 255, 255);
+	font-size: 1.5rem;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	visibility: hidden;
+	display: none;
+}
+#ende1,
+#ende2 {
+	width: 100%;
+	height: 10%;
+	background-color: rgb(241, 76, 10);
+	opacity: 0.9;
+	color: rgb(255, 255, 255);
+	border: 1px solid white;
+
+	position: absolute;
+	top: 10%;
+	font-size: 2.5rem;
+
+	text-align: center;
+
+	display: none;
+}
+#ende3,
+#ende4 {
+	width: 100%;
+	height: 10%;
+	background-color: rgb(241, 76, 10);
+	opacity: 0.9;
+	color: rgb(255, 255, 255);
+	border: 1px solid white;
+
+	position: absolute;
+	top: 90%;
+	font-size: 2.5rem;
+
+	text-align: center;
+
+	display: none;
 }
 
-.show {
-	visibility: visible;
-	/* pointer-events: all; */
-}
-/* .disablePointer {
-	pointer-events: none;
-} */
-#ende1 {
-	background-color: aqua;
-	width: 100%;
-	height: calc(100% / 3);
-	position: absolute;
-	visibility: hidden;
-}
-#ende2 {
-	background-color: aqua;
-	width: 100%;
-	height: calc(100% / 3);
-	position: absolute;
-	visibility: hidden;
+.show,
+#ende1.show,
+#ende2.show {
+	display: block;
 }
