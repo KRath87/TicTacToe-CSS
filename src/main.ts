@@ -45,7 +45,7 @@ function move(DivId: string) {
 	}
 }
 
-//Diese Funktion prüft, !ob! einer von beiden Spielern gewonnen hat.
+//Diese Funktion prüft, ob einer von beiden Spielern gewonnen hat.
 function winCheck() {
 	if (arr[1] === player && arr[2] === player && arr[3] === player) {
 		whoWins();
@@ -73,7 +73,7 @@ function newGame() {
 	(<HTMLSpanElement>document.getElementById("newStart")).classList.add("show");
 	(<HTMLButtonElement>document.getElementById("newGame")).classList.add("show");
 }
-// Diese Funktion prüft, !welcher! Spieler gewonnen hat.
+// Diese Funktion prüft, welcher Spieler gewonnen hat.
 function whoWins() {
 	if (player === "X") {
 		setTimeout(playerOneWin, 50);
