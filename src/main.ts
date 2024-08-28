@@ -80,11 +80,11 @@ function newGame() {
 //MARK: whoWins
 function whoWins() {
 	if (player === "X") {
-		setTimeout(playerOneWin, 25);
-		setTimeout(newGame, 25);
+		setTimeout(playerOneWin, 50);
+		setTimeout(newGame, 50);
 	} else {
-		setTimeout(playerTwoWin, 25);
-		setTimeout(newGame, 25);
+		setTimeout(playerTwoWin, 50);
+		setTimeout(newGame, 50);
 	}
 	game = "gameOver";
 }
