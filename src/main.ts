@@ -70,7 +70,6 @@ function winCheck() {
 }
 // Diese Funktion lässt die Buttons für den Neustart nach Ende des Games erscheinen.
 function newGame() {
-	(<HTMLSpanElement>document.getElementById("newStart")).classList.add("show");
 	(<HTMLButtonElement>document.getElementById("newGame")).classList.add("show");
 }
 // Diese Funktion prüft, welcher Spieler gewonnen hat.
